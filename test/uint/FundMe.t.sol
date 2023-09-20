@@ -11,9 +11,6 @@ import {StdUtils} from "../../lib/forge-std/test/StdUtils.t.sol";
 contract TestFundMe is Test {
     FundMe public fundMe;
 
-    //First method to add Ether
-    // uint256 public constant STARTING_BALANCE = 10 ether;
-
     uint256 public constant SEND_BALANCE = 0.1 ether;
     address alice = makeAddr("alice");
 
@@ -21,8 +18,7 @@ contract TestFundMe is Test {
         DeployFundMe deployFundMe = new DeployFundMe();
         fundMe = deployFundMe.run();
         vm.deal(alice, 1 ether);
-        //Second Method to add Ether
-        //vm.deal(alice, STARTING_BALANCE);
+
     }
 
     function testMinimunUsd() public {

@@ -1,66 +1,47 @@
-## Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+#  Fund-me
 
-Foundry consists of:
+This is fund-me smart Contract. Every user can fund. This contract get a ETH/USD price from chainlink.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Getting Started
+## Requirements
 
-## Documentation
+[git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 
+You'll know you did it right if you can run git --version and you see a response like git version x.x.x
 
-https://book.getfoundry.sh/
+[foundry](https://getfoundry.sh/)
+ You'll know you did it right if you can run forge --version and you see a response like forge 0.2.0 
 
-## Usage
 
-### Build
 
-```shell
+
+## Quickstart
+
+```bash
+$ git clone https://github.com/HackerBadal/Fund-Me
+$ cd fund-me
 $ forge build
 ```
+    
+## Usage
+## Deploy
 
-### Test
+```bash
+$ forge script script/DeployFundMe.s.sol  --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
+```
+## Running Tests
 
-```shell
-$ forge test
+To run tests, run the following command
+
+```bash
+  $ forge test
 ```
 
-### Format
 
-```shell
-$ forge fmt
-```
+## 🚀 About Me
+👾👾I'm a web3 auditor
 
-### Gas Snapshots
 
-```shell
-$ forge snapshot
-```
+## 🔗 Thank you!
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/badal_sharma09)
 
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
