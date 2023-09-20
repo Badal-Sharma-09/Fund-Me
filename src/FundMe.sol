@@ -5,10 +5,10 @@ import {AggregatorV3Interface} from
     "lib/chainlink-brownie-contracts/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import {PriceConverter} from "./PriceConverter.sol";
 
-error NotOwner();
-
 contract FundMe {
     using PriceConverter for uint256;
+
+    error NotOwner();
 
     mapping(address => uint256) private s_addressToAmountFunded;
     address[] private s_funders;
